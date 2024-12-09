@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Shop</title>
+    <script src="app.js" defer></script>
+    <script src="basket.js" defer></script>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+  </head>
+  <body>
+    <header>
+      <h1>Products</h1>
+      <div id="search">
+        <input type="text" placeholder="search in products ..." />
+      </div>
+      <h3 onclick="renderbasket(BASKET)"> <i class="fa-solid fa-cart-shopping"></i> Basket (<span>0</span>)</h3>
+    </header>
+    <div id="basketpage">
+      <i id="closebtn" onclick="closebasket()" class="fa-solid fa-xmark"></i>
+      <h2 class="button m-t">Basket</h2>
+      <ul class="lists" id="basketlist"> </ul>
+      <button class="Proceed">Proceed to checkout</button>
+    </div>
+    <div id="categories">
+      <button class="button">men's clothing</button>
+      <button class="button">jewelery</button>
+      <button class="button">electronics</button>
+      <button class="button">women's clothing</button>
+    </div>
+    <div id="root">
+      <div class="center">
+      <div class="loader"></div>
+    </div>
+    </div>
+  </body>
+</html>
