@@ -29,7 +29,7 @@ function renderbasket(list) {
   });
   total.innerHTML="TOTAL:"+Total +"$"
   ul.innerHTML=template.join("")
-  console.log(Total)
+ 
 }
 function closebasket() {
    BasketPage.style.display="none"

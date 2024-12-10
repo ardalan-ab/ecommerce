@@ -80,7 +80,7 @@ function handleSearch(event) {
 }
 
 function handleFilter(event) {
-  debugger;
+  
   const result = ALL_PRODUCTS.filter((product) => {
     return product.category === event.target.textContent;
   });
