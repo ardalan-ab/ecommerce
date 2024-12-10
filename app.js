@@ -49,7 +49,7 @@ function handleAddToBasket(productId) {
     return item.id===productId
   }));
   render(ALL_PRODUCTS);
-  closebasket()
+  renderbasket(BASKET)
 }
 
 function handleRemoveFromBasket(productId) {
@@ -68,7 +68,7 @@ function handleRemoveFromBasket(productId) {
    }).indexOf(productId);
   BASKET.splice(index, 1);
   render(ALL_PRODUCTS);
-  closebasket()
+  renderbasket(BASKET)
 }
 
 function handleSearch(event) {

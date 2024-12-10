@@ -1,15 +1,15 @@
 const BasketPage = document.getElementById("basketpage");
 const ul =document.getElementById("basketlist")
-
+ const total=document.getElementById("total")
 function renderbasket(list) {
-    let Total=0;
+    let Total=0
       BasketPage.style.display="block"
          BasketPage.style.width="300px"
         document.body.style.marginLeft="300px"
   const template = list.map((item) => {
    return( item.map((item2)=>{  
  
-    
+    Total+=item2.price
     return `      
         <li class="basketlist">
           <img src="${item2.image}" alt="">
@@ -20,13 +20,16 @@ function renderbasket(list) {
         <button class="added button btn" onclick="handleRemoveFromBasket(${item2.id})">Remove</button>
         </li>
      
-        
+       
       
       `;}))
-
+     
+    
  
   });
+  total.innerHTML="TOTAL:"+Total +"$"
   ul.innerHTML=template.join("")
+  console.log(Total)
 }
 function closebasket() {
    BasketPage.style.display="none"

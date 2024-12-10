@@ -5,6 +5,7 @@
 }
 input{
   background-color:rgb(10, 10, 10) ;
+  color: white;
 }
 
 .product {
@@ -178,4 +179,9 @@ input {
   padding: 16px 8px;
   cursor: pointer;
   border: none;
+}
+#total{
+  font-weight: 900;
+  font-size: 1.5rem;
+
 }
